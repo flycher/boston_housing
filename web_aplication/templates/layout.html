@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header id="navegacao">
+        <nav>
+            <a href="{{ url_for('main') }}" title="redireciona a pagina para prever">Prever</a>
+            <a href="{{ url_for('sobre') }}" title="redireciona a pagina explicando o projeto">Sobre</a>
+            <a href="{{ url_for('comparacao') }}" title="redireciona a pagina mostrando a comparacao entre os modelos testados">Comparação</a>
+            <a href="https://github.com/flycher/" title="redireciona a pagina do github com o projeto" target="_blank">Página no Github</a>
+        </nav>
+    </header>
+    <main id="corpo">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
